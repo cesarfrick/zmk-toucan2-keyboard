@@ -13,6 +13,7 @@
     behaviors {
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
+            display-name = "BSPC_DEL";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -20,6 +21,7 @@
 
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
+            display-name = "SHIFT_CAPS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
