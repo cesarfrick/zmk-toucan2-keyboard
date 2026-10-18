@@ -40,18 +40,18 @@
         base {
             display-name = "BASE";
             bindings = <
-//    ┌─────────────┬───┬───┬───┬───┬───┐                                           ┌───┬───┬───┬───┬───────────┬───────────┐
-//    │     tab     │ Q │ W │ E │ R │ T │                                           │ Y │ U │ I │ O │     P     │ &bspc_del │
-//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───────────┼───────────┤
-//    │ &shift_caps │ A │ S │ D │ F │ G │                                           │ H │ J │ K │ L │ mt rsft ; │    esc    │
-//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───────────┼───────────┤
-//    │    lctl     │ Z │ X │ C │ V │ B │                                           │ N │ M │ , │ . │     /     │     '     │
-//    └─────────────┴───┴───┴───┴───┴───┼──────┬──────┬─────┐   ┌─────┬──────┬──────┼───┴───┴───┴───┴───────────┴───────────┘
+//    ┌─────────────┬───┬───┬───┬───┬───┐                                           ┌───┬───┬───┬───┬───┬─────────────┐
+//    │     tab     │ Q │ W │ E │ R │ T │                                           │ Y │ U │ I │ O │ P │  &bspc_del  │
+//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───┼─────────────┤
+//    │ &shift_caps │ A │ S │ D │ F │ G │                                           │ H │ J │ K │ L │ ; │ mt rsft esc │
+//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───┼─────────────┤
+//    │    lctl     │ Z │ X │ C │ V │ B │                                           │ N │ M │ , │ . │ / │      '      │
+//    └─────────────┴───┴───┴───┴───┴───┼──────┬──────┬─────┐   ┌─────┬──────┬──────┼───┴───┴───┴───┴───┴─────────────┘
 //                                      │ lgui │ mo 1 │ spc │   │ ent │ mo 2 │ ralt │
 //                                      └──────┴──────┴─────┘   └─────┴──────┴──────┘
-  &kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T                                                                   &kp Y   &kp U   &kp I       &kp O     &kp P             &bspc_del
-  &shift_caps   &kp A   &kp S   &kp D   &kp F   &kp G                                                                   &kp H   &kp J   &kp K       &kp L     &mt RSHIFT SEMI   &kp ESC
-  &kp LCTRL     &kp Z   &kp X   &kp C   &kp V   &kp B                                                                   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH          &kp SQT
+  &kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T                                                                   &kp Y   &kp U   &kp I       &kp O     &kp P      &bspc_del
+  &shift_caps   &kp A   &kp S   &kp D   &kp F   &kp G                                                                   &kp H   &kp J   &kp K       &kp L     &kp SEMI   &mt RSHIFT ESC
+  &kp LCTRL     &kp Z   &kp X   &kp C   &kp V   &kp B                                                                   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH   &kp SQT
                                                         &kp LGUI   &mo 1   &kp SPACE       &kp RET   &mo 2   &kp RALT
             >;
         };
