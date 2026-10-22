@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <locale/keys_es_latin_american.h>
 
 #define BASE 0
 #define NAV  1
@@ -28,6 +29,46 @@
         };
     };
 
+    macros {
+        // Accented vowels: send the dead acute key (ES_ACUTE = LEFT_BRACKET),
+        // then the vowel. The OS Latin American layout resolves the pair into
+        // the accented character.
+        accent_a: accent_a {
+            compatible = "zmk,behavior-macro";
+            display-name = "ACCENT_A";
+            #binding-cells = <0>;
+            bindings = <&kp ES_ACUTE>, <&kp ES_A>;
+        };
+
+        accent_e: accent_e {
+            compatible = "zmk,behavior-macro";
+            display-name = "ACCENT_E";
+            #binding-cells = <0>;
+            bindings = <&kp ES_ACUTE>, <&kp ES_E>;
+        };
+
+        accent_i: accent_i {
+            compatible = "zmk,behavior-macro";
+            display-name = "ACCENT_I";
+            #binding-cells = <0>;
+            bindings = <&kp ES_ACUTE>, <&kp ES_I>;
+        };
+
+        accent_o: accent_o {
+            compatible = "zmk,behavior-macro";
+            display-name = "ACCENT_O";
+            #binding-cells = <0>;
+            bindings = <&kp ES_ACUTE>, <&kp ES_O>;
+        };
+
+        accent_u: accent_u {
+            compatible = "zmk,behavior-macro";
+            display-name = "ACCENT_U";
+            #binding-cells = <0>;
+            bindings = <&kp ES_ACUTE>, <&kp ES_U>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -42,18 +83,18 @@
         base {
             display-name = "BASE";
             bindings = <
-//    ┌─────────────┬───┬───┬───┬───┬───┐                                           ┌───┬───┬───┬───┬───┬─────────────┐
-//    │     tab     │ Q │ W │ E │ R │ T │                                           │ Y │ U │ I │ O │ P │  &bspc_del  │
-//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───┼─────────────┤
-//    │ &shift_caps │ A │ S │ D │ F │ G │                                           │ H │ J │ K │ L │ ; │ mt rsft esc │
-//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼───┼─────────────┤
-//    │    lctl     │ Z │ X │ C │ V │ B │                                           │ N │ M │ , │ . │ / │      '      │
-//    └─────────────┴───┴───┴───┴───┴───┼──────┬──────┬─────┐   ┌─────┬──────┬──────┼───┴───┴───┴───┴───┴─────────────┘
+//    ┌─────────────┬───┬───┬───┬───┬───┐                                           ┌───┬───┬───┬───┬────────┬─────────────┐
+//    │     tab     │ Q │ W │ E │ R │ T │                                           │ Y │ U │ I │ O │   P    │  &bspc_del  │
+//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼────────┼─────────────┤
+//    │ &shift_caps │ A │ S │ D │ F │ G │                                           │ H │ J │ K │ L │ ES_N_~ │ mt rsft esc │
+//    ├─────────────┼───┼───┼───┼───┼───┤                                           ├───┼───┼───┼───┼────────┼─────────────┤
+//    │    lctl     │ Z │ X │ C │ V │ B │                                           │ N │ M │ , │ . │  ES_/  │    ES_'     │
+//    └─────────────┴───┴───┴───┴───┴───┼──────┬──────┬─────┐   ┌─────┬──────┬──────┼───┴───┴───┴───┴────────┴─────────────┘
 //                                      │ lgui │ mo 1 │ spc │   │ ent │ mo 2 │ ralt │
 //                                      └──────┴──────┴─────┘   └─────┴──────┴──────┘
-  &kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T                                                                   &kp Y   &kp U   &kp I       &kp O     &kp P      &bspc_del
-  &shift_caps   &kp A   &kp S   &kp D   &kp F   &kp G                                                                   &kp H   &kp J   &kp K       &kp L     &kp SEMI   &mt RSHIFT ESC
-  &kp LCTRL     &kp Z   &kp X   &kp C   &kp V   &kp B                                                                   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH   &kp SQT
+  &kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T                                                                   &kp Y   &kp U   &kp I       &kp O     &kp P            &bspc_del
+  &shift_caps   &kp A   &kp S   &kp D   &kp F   &kp G                                                                   &kp H   &kp J   &kp K       &kp L     &kp ES_N_TILDE   &mt RSHIFT ESC
+  &kp LCTRL     &kp Z   &kp X   &kp C   &kp V   &kp B                                                                   &kp N   &kp M   &kp COMMA   &kp DOT   &kp ES_FSLH      &kp ES_SQT
                                                         &kp LGUI   &mo 1   &kp SPACE       &kp RET   &mo 2   &kp RALT
             >;
         };
@@ -80,19 +121,19 @@
         sym {
             display-name = "SYM";
             bindings = <
-//    ┌─────────────┬─────┬─────┬─────┬─────┬─────┐                                         ┌───┬───┬──────┬───┬───┬───────────┐
-//    │     tab     │  !  │  @  │  #  │  $  │  %  │                                         │ ^ │ & │ kp_* │ ( │ ) │ &bspc_del │
-//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
-//    │ &shift_caps │     │     │     │     │     │                                         │ - │ = │  [   │ ] │ \ │     `     │
-//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
-//    │    lctl     │     │     │     │     │     │                                         │ _ │ + │  {   │ } │ | │     ~     │
-//    └─────────────┴─────┴─────┴─────┴─────┴─────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼───┴───┴──────┴───┴───┴───────────┘
-//                                                │ lgui │     │ spc │   │ ent │     │ ralt │
-//                                                └──────┴─────┴─────┘   └─────┴─────┴──────┘
-  &kp TAB       &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT                                                                     &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
-  &shift_caps   &trans     &trans   &trans     &trans     &trans                                                                        &kp MINUS   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
-  &kp LCTRL     &trans     &trans   &trans     &trans     &trans                                                                        &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
-                                                                      &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
+//    ┌─────────────┬───────────┬───────────┬───────────┬───────────┬───────────┐                                         ┌──────┬──────┬──────┬──────┬──────┬───────────┐
+//    │     tab     │   ES_!    │   ES_@    │   ES_#    │   ES_$    │   ES_%    │                                         │ ES_^ │ ES_& │ ES_* │ ES_( │ ES_) │ &bspc_del │
+//    ├─────────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                                         ├──────┼──────┼──────┼──────┼──────┼───────────┤
+//    │ &shift_caps │ &accent_a │ &accent_e │ &accent_i │ &accent_o │ &accent_u │                                         │ ES_- │ ES_= │ ES_[ │ ES_] │ ES_\ │   ES_`    │
+//    ├─────────────┼───────────┼───────────┼───────────┼───────────┼───────────┤                                         ├──────┼──────┼──────┼──────┼──────┼───────────┤
+//    │    lctl     │           │           │           │           │           │                                         │ ES__ │ ES_+ │ ES_{ │ ES_} │ ES_| │   ES_~    │
+//    └─────────────┴───────────┴───────────┴───────────┴───────────┴───────────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼──────┴──────┴──────┴──────┴──────┴───────────┘
+//                                                                              │ lgui │     │ spc │   │ ent │     │ ralt │
+//                                                                              └──────┴─────┴─────┘   └─────┴─────┴──────┘
+  &kp TAB       &kp ES_EXCL   &kp ES_AT   &kp ES_HASH   &kp ES_DLLR   &kp ES_PRCNT                                                                     &kp ES_CARET   &kp ES_AMPS    &kp ES_ASTRK   &kp ES_LPAR   &kp ES_RPAR   &bspc_del
+  &shift_caps   &accent_a     &accent_e   &accent_i     &accent_o     &accent_u                                                                        &kp ES_MINUS   &kp ES_EQUAL   &kp ES_LBKT    &kp ES_RBKT   &kp ES_BSLH   &kp ES_GRAVE
+  &kp LCTRL     &trans        &trans      &trans        &trans        &trans                                                                           &kp ES_UNDER   &kp ES_PLUS    &kp ES_LBRC    &kp ES_RBRC   &kp ES_PIPE   &kp ES_TILDE
+                                                                                     &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
             >;
         };
 
