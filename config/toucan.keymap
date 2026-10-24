@@ -26,6 +26,10 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
+
+        mt: mod_tap {
+          tapping-term-ms = <150>;
+        };
     };
 
     conditional_layers {
