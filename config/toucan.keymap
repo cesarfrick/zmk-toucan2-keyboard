@@ -89,13 +89,13 @@
 //    ├─────────────┼─────┼─────┼─────┼─────┼─────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
 //    │ &shift_caps │     │     │     │     │     │                                         │ - │ = │  [   │ ] │ \ │     `     │
 //    ├─────────────┼─────┼─────┼─────┼─────┼─────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
-//    │    lctl     │     │     │     │     │     │                                         │ _ │ + │  {   │ } │ | │     ~     │
+//    │    lalt     │     │     │     │     │     │                                         │ _ │ + │  {   │ } │ | │     ~     │
 //    └─────────────┴─────┴─────┴─────┴─────┴─────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼───┴───┴──────┴───┴───┴───────────┘
 //                                                │ lgui │     │ spc │   │ ent │     │ ralt │
 //                                                └──────┴─────┴─────┘   └─────┴─────┴──────┘
   &kp TAB       &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT                                                                     &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
   &shift_caps   &trans     &trans   &trans     &trans     &trans                                                                        &kp MINUS   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
-  &kp LCTRL     &trans     &trans   &trans     &trans     &trans                                                                        &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
+  &kp LALT      &trans     &trans   &trans     &trans     &trans                                                                        &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
                                                                       &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
             >;
         };
