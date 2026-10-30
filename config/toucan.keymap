@@ -85,18 +85,18 @@
             display-name = "SYM";
             bindings = <
 //    ┌─────────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                                         ┌───┬───┬──────┬───┬───┬───────────┐
-//    │     tab     │    @    │ ralt(2) │ lalt(3) │    $    │    %    │                                         │ ^ │ & │ kp_* │ ( │ ) │ &bspc_del │
+//    │     tab     │    @    │ ralt(2) │ ralt(3) │    $    │    %    │                                         │ ^ │ & │ kp_* │ ( │ ) │ &bspc_del │
 //    ├─────────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
-//    │ &shift_caps │    +    │    -    │    =    │    !    │ lalt(;) │                                         │ - │ = │  [   │ ] │ \ │     `     │
+//    │ &shift_caps │    +    │    -    │    =    │    !    │ ralt(;) │                                         │ - │ = │  [   │ ] │ \ │     `     │
 //    ├─────────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                         ├───┼───┼──────┼───┼───┼───────────┤
-//    │    lalt     │ lalt([) │ lalt(]) │ lalt(') │ lsft(\) │    \    │                                         │ _ │ + │  {   │ } │ | │     ~     │
+//    │    lalt     │ ralt([) │ ralt(]) │ ralt(') │ rsft(\) │    \    │                                         │ _ │ + │  {   │ } │ | │     ~     │
 //    └─────────────┴─────────┴─────────┴─────────┴─────────┴─────────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼───┴───┴──────┴───┴───┴───────────┘
 //                                                                    │ lgui │     │ spc │   │ ent │     │ ralt │
 //                                                                    └──────┴─────┴─────┘   └─────┴─────┴──────┘
-  &kp TAB       &kp AT           &kp RALT(N2)     &kp LALT(N3)    &kp DLLR          &kp PRCNT                                                                          &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
-  &shift_caps   &kp PLUS         &kp MINUS        &kp EQUAL       &kp EXCL          &kp LALT(SEMI)                                                                     &kp MINUS   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
-  &kp LALT      &kp LALT(LBKT)   &kp LALT(RBKT)   &kp LALT(SQT)   &kp LSHFT(BSLH)   &kp BSLH                                                                           &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
-                                                                                                     &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
+  &kp TAB       &kp AT         &kp RA(N2)     &kp RA(N3)    &kp DLLR       &kp PRCNT                                                                        &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
+  &shift_caps   &kp PLUS       &kp MINUS      &kp EQUAL     &kp EXCL       &kp RA(SEMI)                                                                     &kp MINUS   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
+  &kp LALT      &kp RA(LBKT)   &kp RA(RBKT)   &kp RA(SQT)   &kp RS(BSLH)   &kp BSLH                                                                         &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
+                                                                                          &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
             >;
         };
 
