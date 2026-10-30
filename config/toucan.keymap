@@ -93,7 +93,7 @@
 //    └─────────────┴─────┴─────┴─────┴─────┴─────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼───┴───┴──────┴───┴───┴───────────┘
 //                                                │ lgui │     │ spc │   │ ent │     │ ralt │
 //                                                └──────┴─────┴─────┘   └─────┴─────┴──────┘
-  &kp TAB       &kp AT   &mt LALT N2   &mt LALT N3   &kp DLLR   &kp PRCNT                                                                     &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
+  &kp TAB       &kp AT   &mt RALT KP_N2   &mt LALT KP_N3   &kp DLLR   &kp PRCNT                                                                     &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &bspc_del
   &shift_caps   &kp PLUS     &kp MINUS   &kp EQUAL     &kp EXCL     &mt LALT SEMI                                                                        &kp MINUS   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
   &kp LALT      &mt LALT LBKT     &mt LALT RBKT   &mt LALT SQT     &mt LSHFT BSLH     &kp BSLH                                                                        &kp UNDER   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
                                                                       &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
