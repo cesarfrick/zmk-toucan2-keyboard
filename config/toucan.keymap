@@ -41,6 +41,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hm_bt: homerow_mod_bt {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "HRM_BT";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&bt>;
+        };
     };
 
     combos {
@@ -87,19 +97,19 @@
         nav {
             display-name = "NAV";
             bindings = <
-//    ┌─────────────┬────────────────┬──────────┬──────────┬──────────┬──────────┐                                         ┌──────┬──────┬─────┬──────┬──────┬───────────┐
-//    │     tab     │       1        │    2     │    3     │    4     │    5     │                                         │  6   │  7   │  8  │  9   │  0   │ &bspc_del │
-//    ├─────────────┼────────────────┼──────────┼──────────┼──────────┼──────────┤                                         ├──────┼──────┼─────┼──────┼──────┼───────────┤
-//    │ &shift_caps │    bt_sel 0    │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │                                         │ left │ down │ up  │ rght │ rctl │           │
-//    ├─────────────┼────────────────┼──────────┼──────────┼──────────┼──────────┤                                         ├──────┼──────┼─────┼──────┼──────┼───────────┤
-//    │             │ &studio_unlock │          │          │          │  bt_clr  │                                         │      │      │     │      │      │           │
-//    └─────────────┴────────────────┴──────────┴──────────┴──────────┴──────────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼──────┴──────┴─────┴──────┴──────┴───────────┘
-//                                                                               │ lgui │     │ spc │   │ ent │     │ ralt │
-//                                                                               └──────┴─────┴─────┘   └─────┴─────┴──────┘
-  &kp TAB       &kp N1           &kp N2         &kp N3         &kp N4         &kp N5                                                                           &kp N6     &kp N7     &kp N8   &kp N9      &kp N0      &bspc_del
-  &shift_caps   &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                                                                     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp RCTRL   &trans
-  &trans        &studio_unlock   &trans         &trans         &trans         &bt BT_CLR                                                                       &trans     &trans     &trans   &trans      &trans      &trans
-                                                                                             &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
+//    ┌─────────────┬───────────────────┬──────────────┬──────────────┬───────────────┬──────────┐                                         ┌──────┬──────┬─────┬──────┬──────┬───────────┐
+//    │     tab     │         1         │      2       │      3       │       4       │    5     │                                         │  6   │  7   │  8  │  9   │  0   │ &bspc_del │
+//    ├─────────────┼───────────────────┼──────────────┼──────────────┼───────────────┼──────────┤                                         ├──────┼──────┼─────┼──────┼──────┼───────────┤
+//    │ &shift_caps │ hm_bt lctl bt_s 0 │ hm_bt lalt 1 │ hm_bt lgui 2 │ hm_bt lsft 3 │ bt_sel 4 │                                         │ left │ down │ up  │ rght │ rctl │           │
+//    ├─────────────┼───────────────────┼──────────────┼──────────────┼───────────────┼──────────┤                                         ├──────┼──────┼─────┼──────┼──────┼───────────┤
+//    │             │   &studio_unlock  │              │              │               │  bt_clr  │                                         │      │      │     │      │      │           │
+//    └─────────────┴───────────────────┴──────────────┴──────────────┴───────────────┴──────────┼──────┬─────┬─────┐   ┌─────┬─────┬──────┼──────┴──────┴─────┴──────┴──────┴───────────┘
+//                                                                                               │ lgui │     │ spc │   │ ent │     │ ralt │
+//                                                                                               └──────┴─────┴─────┘   └─────┴─────┴──────┘
+  &kp TAB       &kp N1                    &kp N2                  &kp N3                  &kp N4                   &kp N5                                                                           &kp N6     &kp N7     &kp N8   &kp N9      &kp N0      &bspc_del
+  &shift_caps   &hm_bt LCTRL BT_SEL 0     &hm_bt LALT BT_SEL 1   &hm_bt LGUI BT_SEL 2   &hm_bt LSHIFT BT_SEL 3   &bt BT_SEL 4                                                                     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp RCTRL   &trans
+  &trans        &studio_unlock            &trans                  &trans                  &trans                   &bt BT_CLR                                                                       &trans     &trans     &trans   &trans      &trans      &trans
+                                                                                                                                 &kp LGUI   &trans   &kp SPACE       &kp RET   &trans   &kp RALT
             >;
         };
 
