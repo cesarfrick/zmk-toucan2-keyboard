@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-hold-tap";
             display-name = "HRM";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
