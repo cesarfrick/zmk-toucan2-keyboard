@@ -28,7 +28,7 @@
         };
 
         mt: mod_tap {
-          tapping-term-ms = <150>;
+          tapping-term-ms = <220>;
         };
     };
 
